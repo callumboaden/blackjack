@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Blackjack</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="title">
+                <h1>Blackjack</h1>
+            </div>
+            <div class="bank">
+                <button class="mute__btn"><i class="fas fa-volume-mute "></i></button>
+                <div class="player__bet">Bet: <span>0</span></div>
+                <p><i class="fas fa-dollar-sign"></i> <span class="bank__total">0</span></p>
+            </div>
+        </div>
+
+
+        <div class="dealer">
+
+
+        </div>
+
+
+
+        <div class="player">
+            <div class="player__ring"></div>
+
+            <div class="player__chips"></div>
+
+            <div class="player__hand__list">
+
+            </div>
+            
+
+
+        </div>
+
+        <div class="game__buttons">
+
+            <div class="game__buttons--play">  
+                <button data-action="hit">Hit</button>
+                <button data-action="stand">Stand</button>
+                <button data-action="double">Double</button>
+                <button data-action="split">Split</button>
+                <button data-action="deal">Deal</button>
+            </div>
+            <div class="game__buttons--bet">
+                <button data-bet="25">$25</button>
+                <button data-bet="50">$50</button>
+                <button data-bet="100">$100</button>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <div class="game__screen">
+        
+    </div>
+
+    
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=THt9l9hW"></script>
+    <script src="./index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+/* begin: card styles */
+.card {
+  background-color: transparent;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translate(-100px, 0);
+          transform: translate(-100px, 0);
+}
+
+.card .card__inner.flip-card {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card .card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.card .card__inner .card__back,
+.card .card__inner .card__front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.card .card__inner .card__back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card.move__in {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.card.enlarge {
+  -webkit-animation: 0.75s linear enlarge;
+          animation: 0.75s linear enlarge;
+}
+
+@-webkit-keyframes enlarge {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  75% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes enlarge {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  75% {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* end: card styles */
+/*# sourceMappingURL=card.css.map */

@@ -1,0 +1,75 @@
+/* begin: card styles */
+
+.card
+{
+   
+    background-color: transparent;
+    perspective: 1000px;
+    transition: 1s;
+    transform: translate(-100px, 0);
+
+    .card__inner.flip-card
+    {
+        transform: rotateY(180deg);
+    }
+
+    .card__inner 
+    {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+
+
+
+        .card__back,
+        .card__front
+        {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .card__back
+        {
+            transform: rotateY(180deg);
+        }
+    
+    }
+}
+
+.card.move__in
+{
+    transform: translate(0, 0);
+}
+.card.enlarge
+{
+    animation: 0.75s linear enlarge;
+}
+
+@keyframes enlarge {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.25)
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    75% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* end: card styles */
+
